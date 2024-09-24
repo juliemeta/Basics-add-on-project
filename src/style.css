@@ -1,0 +1,112 @@
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 215, 185, 0.91) 23%,
+    rgba(223, 159, 247, 0.8) 93%
+  );
+  line-height: 1.25;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0px auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px 60px;
+  border-radius: 4px;
+}
+
+.theme-button {
+  display: block;
+  margin: 20px auto 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 5px 15px;
+  transition: all 150ms ease-in-out;
+}
+.theme-button:hover {
+  cursor: pointer;
+  transform: scale(0.97);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+h1 {
+  text-decoration: underline;
+}
+
+.intro-picture {
+  border-radius: 4px;
+  transition: all 150ms ease-in-out;
+  max-width: 100%;
+}
+.intro-picture:hover {
+  filter: opacity(90%);
+  transform: scale(0.99);
+}
+.cat-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  padding: 5px 0 0 0;
+}
+
+.cat-gallery img {
+  border-radius: 4px;
+  width: 100%;
+  transition: all 150ms ease-in-out;
+  object-fit: cover;
+}
+.cat-gallery img:hover {
+  transform: scale(1.4);
+}
+.checklist-button {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #000;
+  border: 1px solid rgba(223, 159, 247, 0.8);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  transition: all 150ms ease-in-out;
+}
+.checklist-button:hover {
+  cursor: pointer;
+  transform: scale(0.97);
+}
+
+.disclaimer-note {
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+footer a {
+  text-decoration: none;
+}
+
+.dark {
+  background: linear-gradient(0deg, #666666 0%, black 100%);
+  color: #fff;
+}
+.dark a {
+  color: #af95be;
+}
+.dark .container {
+  background: rgba(255, 255, 255, 0.1);
+}
+.dark .theme-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #ffffff9c;
+}
+.dark .checklist-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #000;
+  color: #fff;
+}
