@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Abyssinian</title>
+    <style>
+      body {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 215, 185, 0.91) 23%,
+          rgba(223, 159, 247, 0.8) 93%
+        );
+        line-height: 1.25;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0px auto;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 25px 60px;
+        border-radius: 4px;
+      }
+
+      .theme-button {
+        display: block;
+        margin: 20px auto 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        padding: 5px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      .theme-button:hover {
+        cursor: pointer;
+        transform: scale(0.97);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+
+      .intro-picture {
+        border-radius: 4px;
+        transition: all 150ms ease-in-out;
+        max-width: 100%;
+      }
+      .intro-picture:hover {
+        filter: opacity(90%);
+        transform: scale(0.99);
+      }
+      .cat-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+        padding: 5px 0 0 0;
+      }
+
+      .cat-gallery img {
+        border-radius: 4px;
+        width: 100%;
+        transition: all 150ms ease-in-out;
+        object-fit: cover;
+      }
+      .cat-gallery img:hover {
+        transform: scale(1.4);
+      }
+      .checklist-button {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: #000;
+        border: 1px solid rgba(223, 159, 247, 0.8);
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      .checklist-button:hover {
+        cursor: pointer;
+        transform: scale(0.97);
+      }
+
+      .disclaimer-note {
+        font-size: 14px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+      }
+      footer a {
+        text-decoration: none;
+      }
+
+      .dark {
+        background: linear-gradient(0deg, #666666 0%, black 100%);
+        color: #fff;
+      }
+      .dark a {
+        color: #af95be;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark .theme-button {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-color: #ffffff9c;
+      }
+      .dark .checklist-button {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme ✨</button>
+    <div class="container">
+      <h1>The Abyssinian</h1>
+      <h2>A curious and intelligent breed of cat</h2>
+      <a href="https://www.google.com/search?q=abyssinian+cat" target="_blank"
+        ><img
+          class="intro-picture"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/472/original/julie-boulanger-Wxke3VKUqTg-unsplash.jpg?1725013698"
+          alt="aby cat"
+      /></a>
+      <div class="cat-gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/475/original/ivan-yerokhin-9JDAA9N6rbs-unsplash.jpg?1725013752"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/471/original/oleg-kukharuk-MA7Zr6phWBU-unsplash.jpg?1725013681"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/473/original/andrey-stakhovskiy-Hfk4BjXInRU-unsplash.jpg?1725013710"
+          alt=""
+        />
+      </div>
+      <p>
+        An abyssinian cat's distinctive appearance, seeming long, lean and
+        finely coloured compared to other cats, has been analogized to that of
+        human fashion models. <br />Personality-wise, the cats traditionally
+        display active, curious attitudes in which they frequently follow owners
+        around and encourage play. Their dog-like characteristics also involve a
+        particular sense of affection and desire for interaction.
+        <br /><br />Abys have a distinctive wildcat look with their ticked coat
+        and large erect ears. They are a highly social breed and can be
+        demanding of attention.
+      </p>
+      <h3>Thinking of getting a kitten?</h3>
+      <p>
+        If you're serious about getting a kitten, the abyssinian will be a great
+        companion. <br />Especially if you're not just looking for a cat that
+        will be a pretty addition to your household, but also your new best
+        furry friend! <br />
+      </p>
+      <button class="checklist-button">Get a Kitten Checklist</button>
+      <br />
+      <div class="disclaimer-note"></div>
+    </div>
+    <footer>
+      <br />
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/julie-meta-monefeldt/"
+        target="_blank"
+        >Julie M. Jeffries</a
+      ><br />© 2024
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function getChecklist() {
+        let firstName = prompt("What is your first name?");
+        let email = prompt("And lastly, what is your email address?");
+        alert(
+          "A brochure has been sent to " +
+            email +
+            ". Wishing you the best of luck with your future furry best friend, " +
+            firstName +
+            "! 🐈"
+        );
+
+        let disclaimerNote = document.querySelector(".disclaimer-note");
+        {
+          disclaimerNote.innerHTML =
+            "<br />👉 Please note this is a test page and therefore no email has been sent to " +
+            email +
+            ".";
+        }
+      }
+
+      let checklistButton = document.querySelector(".checklist-button");
+      checklistButton.addEventListener("click", getChecklist);
+    </script>
+  </body>
+</html>
